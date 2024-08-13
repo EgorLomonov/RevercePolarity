@@ -42,6 +42,7 @@
 				buttonWinona: $('.button-winona'),
 			};
 
+
 	/**
 	 * @desc Check the element was been scrolled into the view
 	 * @param {object} elem - jQuery object
