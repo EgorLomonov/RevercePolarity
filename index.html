@@ -460,8 +460,9 @@
         "
       >
       <div class="form-wrapper">
-        <form method="post" class="form" action="telegramform/php/send-message-to-telegram.php">
-          <h2>Заказать обратный звонок</h2>
+        <h2>Заказать обратный звонок</h2>
+        <form method="post" class="telegram-form" action="">
+          
           <input
             type="text"
             id="name"
@@ -829,6 +830,8 @@
       $('input[type="tel"]').mask('+7(000)000-00-00');
     });
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./telegramform/php/telegramform.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
