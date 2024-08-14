@@ -4,7 +4,7 @@ $phone = $_POST['phone']
 // Токен телеграм бота
 $token = "7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs";
 // ID Чата
-$chat_id = "-4207696489";
+$chat_id = "-4230033542";
 $arr = array(
     'Имя' => $name,
     'Телефон' => $phone
