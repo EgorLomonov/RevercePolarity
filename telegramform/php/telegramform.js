@@ -26,7 +26,7 @@ $('.telegram-form').on('submit', function (event) {
     });
     
     $.ajax({
-        url: './telegramform/php/send-message-to-telegram.php',
+        url: 'send-message-to-telegram.php',
         type: 'POST',
         data: data,
         cache: false,
