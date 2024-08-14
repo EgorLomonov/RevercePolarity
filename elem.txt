@@ -1,0 +1,109 @@
+ <section class="section novi-background section-lg text-center bg-gray-100">
+        <div class="container">
+          <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Наша команда</span></h3>
+          <div
+            class="row row-lg-50 row-35 row-xxl-70 justify-content-center justify-content-lg-start"
+          >
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft">
+                <figure class="profile-creative-figure">
+                  <img
+                    class="profile-creative-image"
+                    src="images/team-1-270x273.jpg"
+                    alt=""
+                    width="270"
+                    height="273"
+                  />
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">Богрик</a></h5>
+                  <p class="profile-creative-position">Замерщик</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline">
+                      <span class="icon novi-icon icon-md mdi mdi-phone"></span
+                      ><a href="tel:#">1-800-1324-567</a>
+                    </div>
+                  </div>
+                  <p>Описание</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+                <figure class="profile-creative-figure">
+                  <img
+                    class="profile-creative-image"
+                    src="images/team-2-270x273.jpg"
+                    alt=""
+                    width="270"
+                    height="273"
+                  />
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">Егрик</a></h5>
+                  <p class="profile-creative-position">Дизайнер</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline">
+                      <span class="icon novi-icon icon-md mdi mdi-phone"></span
+                      ><a href="tel:#">1-800-1324-567</a>
+                    </div>
+                  </div>
+                  <p>Описание</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft">
+                <figure class="profile-creative-figure">
+                  <img
+                    class="profile-creative-image"
+                    src="images/team-3-270x273.jpg"
+                    alt=""
+                    width="270"
+                    height="273"
+                  />
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">Кто то</a></h5>
+                  <p class="profile-creative-position">Риэлтор</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline">
+                      <span class="icon novi-icon icon-md mdi mdi-phone"></span
+                      ><a href="tel:#">1-800-1324-567</a>
+                    </div>
+                  </div>
+                  <p>Описание</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+                <figure class="profile-creative-figure">
+                  <img
+                    class="profile-creative-image"
+                    src="images/team-4-270x273.jpg"
+                    alt=""
+                    width="270"
+                    height="273"
+                  />
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">Кирилл</a></h5>
+                  <p class="profile-creative-position">Закупщик</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline">
+                      <span class="icon novi-icon icon-md mdi mdi-phone"></span
+                      ><a href="tel:#">1-800-1324-567</a>
+                    </div>
+                  </div>
+                  <p>Описание</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
