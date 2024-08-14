@@ -12,9 +12,12 @@ $('.telegram-form').on('submit', function (event) {
     $('.submit', form).val('Отправка...');
     $('input, textarea', form).attr('disabled','');
 
-    data.append( 'Имя', 		$('[name="name"]', form).val() );
-    data.append( 'Телефон', 		$('[name="phone"]', form).val() );
-
+    data.append( 'name', 		$('[name="name"]', form).val() );
+    data.append( 'phone', 		$('[name="phone"]', form).val() );
+    data.append( 'email', 		$('[name="email"]', form).val() );
+    data.append( 'text', 		$('[name="text"]', form).val() );
+    data.append( 'file', 		$('[name="file"]', form).val() );
+   
 
     files.each(function (key, file) {
         let cont = file.files;
@@ -26,7 +29,7 @@ $('.telegram-form').on('submit', function (event) {
     });
     
     $.ajax({
-        url: './telegramform/php/ajax.php',
+        url: 'ajax.php',
         type: 'POST',
         data: data,
         cache: false,
@@ -54,7 +57,7 @@ $('.telegram-form').on('submit', function (event) {
         },
         complete: function() {
             // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Сообщение отправленно')
+            console.log('Complete')
             form.reset() 
         }
     });
