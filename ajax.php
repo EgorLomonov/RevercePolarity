@@ -6,8 +6,8 @@ $token = "7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs";
 // ID Чата
 $chat_id = "-4207696489";
 $arr = array(
-    "Имя" => $name,
-    "Телефон" => $phone
+    'Имя' => $name,
+    'Телефон' => $phone
 );
 foreach($arr as $key => $value){
     $txt .= "<b>".$key."</b>".$value."%0A";
