@@ -2122,7 +2122,26 @@ html .list-inline-md > * {
 		margin-top: 75px;
 	}
 }
-
+.form h2 {
+	font-size: 20px;
+	color: #111;
+	margin-bottom: 20px;
+  }
+  
+  .form .input {
+	border: 1px solid #d17224;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+  }
+  
+  .form .btn {
+	margin-top: 10px;
+	background-color: #d17224;
+	padding: 10px;
+	color: #fff;
+	border-radius: 5px;
+  }
 .index-list {
 	counter-reset: li;
 }
