@@ -27,7 +27,7 @@ $('.telegram-form').on('submit', function (event) {
     
     $.ajax({
         url: './telegramform/php/ajax.php',
-        type: 'POST',
+        type: 'Get',
         data: data,
         cache: false,
         dataType: 'json',

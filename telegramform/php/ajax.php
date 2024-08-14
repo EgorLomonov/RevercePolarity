@@ -1,4 +1,3 @@
-
 <?php
 // Токен телеграм бота
 $tg_bot_token = "7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs";
