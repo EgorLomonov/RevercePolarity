@@ -54,7 +54,7 @@ $('.telegram-form').on('submit', function (event) {
         },
         complete: function() {
             // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Complete')
+            console.log('Сообзение отправленно')
             form.reset() 
         }
     });
