@@ -461,14 +461,16 @@
         "
       >
       <div class="form-wrapper">
+
         <h2>Заказать обратный звонок</h2>
         <form class="form" onsubmit="sendEmailTelegram(event)">
-          
+          <div class="form__group">
           <input
             type="text"
             id="name"
             name="name"
             class="input"
+            autocomplete="off"
             placeholder="Ваше имя"
           />
         
@@ -476,14 +478,16 @@
             type="phone"
             id="phone"
             name="phone"
+            autocomplete="off"
             class="input"
             placeholder="Номер телефона"
           />
-        
+        </div> 
           <div class="form__submit-button">
             <button type="submit">Отправить заявку</button>
           </div>
-          <div class="form_send-result"></div>
+         
+          <div class="form__send-result"></div>
         </form>
       </div>
       </section>
