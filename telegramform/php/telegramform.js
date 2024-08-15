@@ -1,66 +1,45 @@
-$('.telegram-form').on('submit', function (event) {
+"use strict"
 
-    event.stopPropagation();
-    event.preventDefault();
-
-    let form = this,
-        submit = $('.submit', form),
-        data = new FormData(),
-        files = $('input[type=file]')
+const TELEGRAM_BOT_TOKEN = "7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs";
+const TELEGRAM_CHAT_ID = "@RevercePolarity";
+const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
 
 
-    $('.submit', form).val('Отправка...');
-    $('input, textarea', form).attr('disabled','');
+async function sendEmailTelegram (event) {
+    event.preverntDefault()
 
-    data.append( 'name', 		$('[name="name"]', form).val() );
-    data.append( 'phone', 		$('[name="phone"]', form).val() );
-    data.append( 'email', 		$('[name="email"]', form).val() );
-    data.append( 'text', 		$('[name="text"]', form).val() );
-    data.append( 'file', 		$('[name="file"]', form).val() );
-   
-
-    files.each(function (key, file) {
-        let cont = file.files;
-        if ( cont ) {
-            $.each( cont, function( key, value ) {
-                data.append( key, value );
-            });
-        }
-    });
+    const form = event.target;
+    const formBtn = document.querySelector('.form__submit-button button')
+    const formSendResult = document.querySelector('.form_send-result')
+    formSendResult.textContent = '';
     
-    $.ajax({
-        url: 'ajax.php',
-        type: 'POST',
-        data: data,
-        cache: false,
-        dataType: 'json',
-        processData: false,
-        contentType: false,
-        xhr: function() {
-            let myXhr = $.ajaxSettings.xhr();
+    const {name, phone} = Object.fromEntries(new FormData (form).entries())
+    
+    const text = `Заявка от ${name},\n Номер телефона ${phone}`;
 
-            if ( myXhr.upload ) {
-                myXhr.upload.addEventListener( 'progress', function(e) {
-                    if ( e.lengthComputable ) {
-                        let percentage = ( e.loaded / e.total ) * 100;
-                            percentage = percentage.toFixed(0);
-                        $('.submit', form)
-                            .html( percentage + '%' );
-                    }
-                }, false );
-            }
+    try{
+        formBtn.textContent = 'Загрузка...'
+        const response = await fetch(API,{
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text,
+            })
+        });
 
-            return myXhr;
-        },
-        error: function( jqXHR, textStatus ) {
-            // Тут выводим ошибку
-        },
-        complete: function() {
-            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Complete')
-            form.reset() 
+        if(response.ok){
+            formSendResult.textContent = 'Спасибо за заявку, специалист свяжется с вами в ближайшее время.'
+            form.reset()
+        }else{
+            throw new Error(response.statusText)
         }
-    });
-
-    return false;
-});
+    }catch(error){
+        console.error(error)
+           formSendResult.textContent = 'Упс...Чтото пошло не так. Попробуйте позже'
+    }finally{
+        formBtn.textContent = 'Отправить заявку'
+    }
+}

@@ -462,7 +462,7 @@
       >
       <div class="form-wrapper">
         <h2>Заказать обратный звонок</h2>
-        <form action="ajax.php" method="POST">
+        <form>
           
           <input
             type="text"
@@ -480,7 +480,10 @@
             placeholder="Номер телефона"
           />
         
-          <input type="submit" value="Отправить" class="btn" />
+          <div class="form__submit-button">
+            <button type="submit">Отправить заявку</button>
+          </div>
+          <div class="form_send-result"></div>
         </form>
       </div>
       </section>
@@ -830,6 +833,7 @@
     });
   </script>
     <script src="js/core.min.js"></script>
+    <script src="telegramform/php/telegramform.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

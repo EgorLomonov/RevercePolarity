@@ -18,5 +18,6 @@ if ($sendToTelegram){
     header('Location:index.html');
     return true
 }else{
+    header('Location:index.html');
     echo('Error')
 }
