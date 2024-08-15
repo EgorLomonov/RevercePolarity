@@ -806,12 +806,19 @@
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
      
-2
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script>
+    $(function () {
+      $('input[type="phone"]').mask('+7(000)000-00-00');
+    });
+  </script>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
-
+$('html').width()
 const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
 	const TELEGRAM_CHAT_ID = '-4230033542';
 	const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
@@ -856,13 +863,6 @@ const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
   </script>
 
   <!-- Маска ввода номера телефона. Подробнее тут: https://smartlanding.biz/maski-vvoda-telefona.html -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-  <script>
-    $(function () {
-      $('input[type="phone"]').mask('+7(000)000-00-00');
-    });
-  </script>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+  
   </body>
 </html>
