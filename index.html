@@ -491,8 +491,8 @@
             required
           />
           <input
-            type="text"
-            id="Kvm"
+            type="number"
+            id="kvm"
             name="kvm"
             autocomplete="off"
             class="input"
@@ -832,7 +832,7 @@ const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
 	
 	document.getElementById('form').addEventListener('submit',function(e){
     e.preventDefault()
-    let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона' + this.phone.value;
+    let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона:' + this.phone.value; + '\n'+ 'Город:' + this.city.value + '\n' + 'Квадратных метров' + this.kvm.value
     axios.post(API, {
       chat_id: TELEGRAM_CHAT_ID,
       parse_mode: html,
