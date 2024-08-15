@@ -50,9 +50,6 @@
       </div>
     </div>
     <div class="page">
-      <div class="cont">
-        <a href="#" class="btn">Hover to Shine</a>
-      </div>
       <header class="section novi-background page-header">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
@@ -484,6 +481,24 @@
             placeholder="Номер телефона"
             required
           />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            autocomplete="off"
+            class="input"
+            placeholder="Номер телефона"
+            required
+          />
+          <input
+            type="text"
+            id="Kvm"
+            name="kvm"
+            autocomplete="off"
+            class="input"
+            placeholder="Номер телефона"
+            required
+          />
         </div> 
           <div class="form__submit-button">
             <button type="submit">Отправить заявку</button>
@@ -833,24 +848,6 @@ const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
       console.log('ГОтово')
     })
   })
-	
-    // Кастомизация поля с файлом. Подробнее тут: https://smartlanding.biz/stilizaciya-input-type-file.html
-    let inputs = document.querySelectorAll('.contact-form__input_file');
-    Array.prototype.forEach.call(inputs, function (input) {
-      let label = input.nextElementSibling,
-        labelVal = label.querySelector('.contact-form__file-text').innerText;
-
-      input.addEventListener('change', function (e) {
-        let countFiles = '';
-        if (this.files && this.files.length >= 1)
-          countFiles = this.files.length;
-
-        if (countFiles)
-          label.querySelector('.contact-form__file-text').innerText = 'Выбрано файлов: ' + countFiles;
-        else
-          label.querySelector('.contact-form__file-text').innerText = labelVal;
-      });
-    });
 
   </script>
 
