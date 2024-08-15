@@ -244,3 +244,47 @@
           </div>
         </div>
       </section>
+
+
+
+
+const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
+	const TELEGRAM_CHAT_ID = '-4230033542';
+	const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
+	
+	document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault()
+    let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона' + this.phone.value;
+    axios.post(API, {
+      chat_id: TELEGRAM_CHAT_ID,
+      parse_mode: html,
+      text: message
+    })
+    .then((res)=>{
+      ///
+    })
+    .catch((err) =>{
+      console.warn(err);
+    })
+    .finally(()=>{
+      console.log('ГОтово')
+    })
+  })
+	
+    // Кастомизация поля с файлом. Подробнее тут: https://smartlanding.biz/stilizaciya-input-type-file.html
+    let inputs = document.querySelectorAll('.contact-form__input_file');
+    Array.prototype.forEach.call(inputs, function (input) {
+      let label = input.nextElementSibling,
+        labelVal = label.querySelector('.contact-form__file-text').innerText;
+
+      input.addEventListener('change', function (e) {
+        let countFiles = '';
+        if (this.files && this.files.length >= 1)
+          countFiles = this.files.length;
+
+        if (countFiles)
+          label.querySelector('.contact-form__file-text').innerText = 'Выбрано файлов: ' + countFiles;
+        else
+          label.querySelector('.contact-form__file-text').innerText = labelVal;
+      });
+    });
