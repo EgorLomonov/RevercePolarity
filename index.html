@@ -822,9 +822,14 @@
     <!-- Javascript-->
      
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
   <script>
+    $(document).ready(function(){
+      $("#phone").mask("+7 (999) 99-99-999")
+    });
 
 const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
 	const TELEGRAM_CHAT_ID = '-4230033542';
@@ -832,7 +837,7 @@ const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
 	
 	document.getElementById('form').addEventListener('submit',function(e){
     e.preventDefault()
-    let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона:' + this.phone.value + '\n'+ 'Город:' + this.city.value + '\n' + 'Квадратных метров' + this.kvm.value;
+    let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона:' + this.phone.value + '\n'+ 'Город:' + this.city.value + '\n' + 'Квадратных метров:' + this.kvm.value;
     axios.post(API, {
       chat_id: TELEGRAM_CHAT_ID,
       text: message
