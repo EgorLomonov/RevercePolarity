@@ -828,7 +828,6 @@ const TELEGRAM_BOT_TOKEN = '7332479910:AAHrlZoFLj0C6Japxjcmd9FX1Ly7zH9MgOs';
     let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона' + this.phone.value;
     axios.post(API, {
       chat_id: TELEGRAM_CHAT_ID,
-      parse_mode: html,
       text: message
     })
     .then((res)=>{
